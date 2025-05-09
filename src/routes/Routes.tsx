@@ -18,12 +18,12 @@ const Router = () => {
       <Route path='/' element={<LayoutWebsite />}>
         <Route path='' element={<HomeController />} />
         <Route path='ai-gen' element={<AiGenController />} />
-        <Route path='editor' element={<TryOnEditorController />} />
+      
       </Route>
       <Route path='/admin' element={<LayoutAdmin />}>
         {/* <Route path='' element={<DashBoardController />} /> */}
       </Route>
-
+      <Route path='editor' element={<TryOnEditorController />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   );
