@@ -5,6 +5,10 @@ import shoppe from "../../images/image 13.png";
 import ToolCardSection from "./ToolCardSection";
 import EcBoostHowItWorks from "./EcBoostHowItWorks";
 import EcBoostIntroBlocks from "./EcBoostIntroBlocks";
+import Testimonials from "./Testimonials";
+import PricingSection from "./PricingSection";
+import FAQSection from "./FAQSection";
+import CTASection from "./CTASection";
 type Props = {};
 
 const HomeView = (props: Props) => {
@@ -12,7 +16,7 @@ const HomeView = (props: Props) => {
     <Box>
       <BannerHero />
       <Container
-        maxWidth='lg'
+        maxWidth="lg"
         sx={{
           my: "50px",
           display: "flex",
@@ -32,6 +36,12 @@ const HomeView = (props: Props) => {
         <EcBoostHowItWorks />
         <EcBoostIntroBlocks />
       </Container>
+      <Testimonials/>
+      <Container  maxWidth="lg">
+        <PricingSection/>
+        <FAQSection/>
+      </Container>
+      <CTASection/>
     </Box>
   );
 };

@@ -7,6 +7,8 @@ import NotFound from "../components/NotFound";
 
 import LayoutAdmin from "../components/layouts/LayoutAdmin";
 import HomeController from "../pages/home/HomeController";
+import AiGenController from "../pages/ai_gen/AiGenController";
+import TryOnEditorController from "../pages/editor/TryOnEditorController";
 
 const Router = () => {
   const context: any = useCoursesContext();
@@ -15,6 +17,8 @@ const Router = () => {
     <Routes>
       <Route path='/' element={<LayoutWebsite />}>
         <Route path='' element={<HomeController />} />
+        <Route path='ai-gen' element={<AiGenController />} />
+        <Route path='editor' element={<TryOnEditorController />} />
       </Route>
       <Route path='/admin' element={<LayoutAdmin />}>
         {/* <Route path='' element={<DashBoardController />} /> */}

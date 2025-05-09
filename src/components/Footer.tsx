@@ -35,7 +35,7 @@ const Footer = () => {
               />
               <Typography fontWeight='bold'>EcBoost</Typography>
             </Box>
-            <Typography variant='body2' color='text.secondary' mb={2}>
+            <Typography variant='body2' color='text.secondary' my={3}>
               Giải pháp hàng đầu cho doanh nghiệp thương mại điện tử
             </Typography>
             <Stack direction='row' spacing={1}>
@@ -59,7 +59,7 @@ const Footer = () => {
             <Typography fontWeight='bold' gutterBottom>
               Về chúng tôi
             </Typography>
-            <Stack spacing={1}>
+            <Stack spacing={2}>
               <Link href='#' underline='hover' color='text.secondary'>
                 Giới thiệu
               </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
             <Typography fontWeight='bold' gutterBottom>
               Công cụ
             </Typography>
-            <Stack spacing={1}>
+            <Stack spacing={2}>
               <Link href='#' underline='hover' color='text.secondary'>
                 AI Style Gen
               </Link>
@@ -98,7 +98,7 @@ const Footer = () => {
             <Typography fontWeight='bold' gutterBottom>
               Hỗ trợ
             </Typography>
-            <Stack spacing={1}>
+            <Stack spacing={2}>
               <Link href='#' underline='hover' color='text.secondary'>
                 Trung tâm hỗ trợ
               </Link>
