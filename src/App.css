@@ -39,16 +39,19 @@ body {
   border: 0px solid transparent;
   padding: 0;
   background-color: transparent;
+  display: "none";
 }
 
 .hidden-add-voice::-webkit-scrollbar {
   width: 0px;
+  display: "none";
 }
 
 .hidden-add-voice::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 0px;
   background-color: transparent;
   border: 0px solid transparent;
+  display: "none";
 }
 
 body::-webkit-scrollbar-track {
