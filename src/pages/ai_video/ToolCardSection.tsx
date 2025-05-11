@@ -104,6 +104,15 @@ const ToolCardSection = () => {
           </Grid>
         ))}
       </Grid>
+      <Box display='flex' justifyContent='center' mt={4}>
+        <Button
+          variant='contained'
+          sx={{ borderRadius: 1, fontWeight: "bold" }}
+          endIcon={<ArrowForwardIcon />}
+          size='large'>
+          Thử ngay
+        </Button>
+      </Box>
     </Container>
   );
 };

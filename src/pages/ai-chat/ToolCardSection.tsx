@@ -52,17 +52,14 @@ const ToolCardSection = () => {
       <Grid container gap='15px' justifyContent='space-between'>
         {tools.map((tool, index) => (
           <Grid item xs={11} sm={5} md={3.6} key={index}>
-            <Card
+            <Box
               sx={{
                 width: "100%",
                 borderRadius: 2,
                 overflow: "hidden",
-                boxShadow: 1,
+                border: "none",
                 transition: "all 0.3s ease-in-out",
-                "&:hover": {
-                  transform: "translateY(-5px)",
-                  boxShadow: 3,
-                },
+
                 height: "85%", // Ensure card height is 100% of parent
                 display: "flex",
                 flexDirection: "column",
@@ -100,10 +97,19 @@ const ToolCardSection = () => {
                   {tool.description}
                 </Typography>
               </CardContent>
-            </Card>
+            </Box>
           </Grid>
         ))}
       </Grid>
+      <Box display='flex' justifyContent='center' mt={4}>
+        <Button
+          variant='contained'
+          sx={{ borderRadius: 1, fontWeight: "bold" }}
+          size='large'>
+          Dùng thử miễn phí
+        </Button>
+      </Box>
+      
     </Container>
   );
 };

@@ -18,6 +18,7 @@ import {
   Popover,
   Tabs,
   Tab,
+  Hidden,
 } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
@@ -33,7 +34,7 @@ import {
 import user_aigen from "../../images/image 1820.png";
 import user_left from "../../images/Frame 1618871470.png";
 import user_demo from "../../images/image-editor.png";
-
+import credits from "../../images/AI Icons.svg";
 // Header buttons
 const ProButton = styled(Button)(({ theme }) => ({
   background: "linear-gradient(to right, #FFD700, #FF6600)",
@@ -97,28 +98,39 @@ const Header = () => {
             <Box
               sx={{
                 width: 36,
-                height: "100%",
+                height: "36px",
                 backgroundColor: "#ddd",
                 borderRadius: 2,
                 mr: 1.5,
               }}
             />
-            <Typography
-              variant='subtitle1'
-              sx={{ color: "#0c0c1d", fontWeight: "bold" }}>
-              EcBoot
-            </Typography>
+            <Hidden smDown>
+              <Typography
+                variant='subtitle1'
+                sx={{ color: "#0c0c1d", fontWeight: "bold" }}>
+                EcBoot
+              </Typography>
+            </Hidden>
           </Box>
           <Box display='flex' alignItems='center' gap={1.5}>
-            <Button
-              variant='contained'
-              sx={{ borderRadius: 1 }}
-              startIcon={<DownloadIcon />}>
-              Download
-            </Button>
+            <Hidden smDown>
+              <Button
+                variant='contained'
+                sx={{ borderRadius: 1 }}
+                startIcon={<DownloadIcon />}>
+                Download
+              </Button>
+            </Hidden>
             <ProButton startIcon={<StarIcon />}>Mở khóa Pro</ProButton>
-            <LoginButton>Đăng nhập</LoginButton>
-            <Box>
+
+            {/* <LoginButton>Đăng nhập</LoginButton> */}
+            <Box display={"flex"} alignItems={"center"} gap={"10px"}>
+              <Box display={"flex"} alignItems={"center"} gap={"5px"}>
+                <img src={credits} alt='' />{" "}
+                <Typography color='black' fontWeight={"500"}>
+                  10
+                </Typography>
+              </Box>
               <Box
                 aria-describedby={id1}
                 onClick={handleClick1}
@@ -329,19 +341,23 @@ export default function TryOnEditorView() {
           <Paper
             className='hidden-add-voice'
             sx={{
-              height: "87vh",
+              height: { xs: "auto", md: "87vh" },
               display: "flex",
               flexDirection: "column",
               borderRadius: 0,
               p: 0,
               borderRight: "1px solid #eee",
               position: "relative",
-              overflowY: "scroll",
+              overflowY: { xs: "unset", md: "scroll" },
             }}>
             {/* Scrollable content */}
             <Box
               className='hidden-add-voice'
-              sx={{ flexGrow: 1, overflowY: "scroll", p: 2 }}>
+              sx={{
+                flexGrow: 1,
+                overflowY: { xs: "unset", md: "scroll" },
+                p: 2,
+              }}>
               {/* Header */}
               <Box
                 display='flex'
@@ -382,7 +398,11 @@ export default function TryOnEditorView() {
                     fontSize: 14,
                     cursor: "pointer",
                   }}>
-                  <Typography fontWeight={"600"}>Quần áo đơn</Typography>
+                  <Typography
+                    sx={{ fontSize: { xs: 13, md: "1rem" } }}
+                    fontWeight={"600"}>
+                    Quần áo đơn
+                  </Typography>
                 </Box>
                 <Box
                   onClick={() => setAction(2)}
@@ -397,7 +417,11 @@ export default function TryOnEditorView() {
                     cursor: "pointer",
                     borderRadius: 1,
                   }}>
-                  <Typography fontWeight={"600"}>Trên & dưới</Typography>
+                  <Typography
+                    sx={{ fontSize: { xs: 13, md: "1rem" } }}
+                    fontWeight={"600"}>
+                    Trên & dưới
+                  </Typography>
                 </Box>
               </Box>
 
@@ -658,6 +682,12 @@ export default function TryOnEditorView() {
                     open={open1}
                     anchorEl={anchorEl1}
                     onClose={handleClose1}
+                    sx={{
+                      left: {
+                        xs: "2px !important",
+                      },
+                      maxWidth: { xs: "calc(100% - 32px)" },
+                    }}
                     anchorOrigin={{
                       vertical: "bottom",
                       horizontal: "left",
@@ -751,10 +781,12 @@ export default function TryOnEditorView() {
                         textAlign: "center",
                         py: 1,
                         fontWeight: 600,
-                        fontSize: 14,
+
                         cursor: "pointer",
                       }}>
-                      <Typography fontWeight={"600"}>
+                      <Typography
+                        sx={{ fontSize: { xs: 13, md: "1rem" } }}
+                        fontWeight={"600"}>
                         Mẫu của chúng tôi
                       </Typography>
                     </Box>
@@ -771,7 +803,11 @@ export default function TryOnEditorView() {
                         cursor: "pointer",
                         borderRadius: 1,
                       }}>
-                      <Typography fontWeight={"600"}>Mẫu của bạn</Typography>
+                      <Typography
+                        sx={{ fontSize: { xs: 13, md: "1rem" } }}
+                        fontWeight={"600"}>
+                        Mẫu của bạn
+                      </Typography>
                     </Box>
                   </Box>
                   {action1 == 1 && (
@@ -828,8 +864,8 @@ export default function TryOnEditorView() {
                   <Box display='flex' gap={1} flexWrap={"wrap"}>
                     <Box
                       sx={{
-                        width: "23%",
-                        height: 150,
+                        width: { xs: "21%", md: "23%" },
+                        height: { xs: 125, md: 150 },
                         borderRadius: 1,
                         display: "flex",
                         alignItems: "center",
@@ -850,8 +886,8 @@ export default function TryOnEditorView() {
                         src={user_demo}
                         variant='rounded'
                         sx={{
-                          width: "23.5%",
-                          height: 154,
+                          width: { xs: "21%", md: "23%" },
+                          height: { xs: 125, md: 154 },
                           borderRadius: 1,
                         }}
                       />
@@ -903,22 +939,52 @@ export default function TryOnEditorView() {
             </Box>
 
             {/* Fixed button */}
-            <Box sx={{ p: 2, borderTop: "1px solid #eee" }}>
-              <Button
-                fullWidth
-                variant='contained'
-                sx={{
-                  borderRadius: 1,
-                  textTransform: "none",
-                  fontWeight: 600,
-                  fontSize: 15,
-                }}>
-                Tạo (1 credit)
-              </Button>
-            </Box>
+            <Hidden smDown>
+              <Box sx={{ p: 2, borderTop: "1px solid #eee" }}>
+                <Button
+                  fullWidth
+                  variant='contained'
+                  sx={{
+                    borderRadius: 1,
+                    textTransform: "none",
+                    fontWeight: 600,
+                    fontSize: 15,
+                  }}>
+                  Tạo (1 credit)
+                </Button>
+              </Box>
+            </Hidden>
           </Paper>
         </Grid>
+        <Hidden smUp>
+          <Box
+            sx={{
+              py: 2,
+              borderTop: "1px solid #eee",
+              position: "fixed",
+              bottom: 0,
+              left: 0,
 
+              background: "white",
+              zIndex: 1,
+              width: "100% !important",
+              display: "flex",
+              justifyContent: "center",
+            }}>
+            <Button
+              fullWidth
+              variant='contained'
+              sx={{
+                borderRadius: 1,
+                textTransform: "none",
+                fontWeight: 600,
+                fontSize: 15,
+                width: "90% !important",
+              }}>
+              Tạo (1 credit)
+            </Button>
+          </Box>
+        </Hidden>
         {/* Main Content */}
         <Grid item xs={12} md={8.4} bgcolor={"#E6E6E6"}>
           <Box
@@ -928,6 +994,7 @@ export default function TryOnEditorView() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              paddingBottom: { xs: "50px", md: 0 },
             }}>
             <TryOnResult />
             {/* <TryOnGuide /> */}
@@ -955,6 +1022,10 @@ const StyledBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
     textAlign: "center",
+    width: "100%",
+    maxWidth: "95vw",
+    height: "auto",
+    padding: theme.spacing(2),
   },
 }));
 
@@ -964,6 +1035,7 @@ const ImageBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     paddingRight: 0,
     marginBottom: theme.spacing(2),
+    width: "100%",
   },
 }));
 
@@ -972,6 +1044,9 @@ const StepsBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   gap: theme.spacing(2),
+  [theme.breakpoints.down("sm")]: {
+    gap: theme.spacing(3),
+  },
 }));
 
 const Step = ({ number, title, description }) => (
@@ -1010,7 +1085,12 @@ const TryOnGuide = () => {
         <img
           src={user_left}
           alt='Try on preview'
-          style={{ width: "100%", borderRadius: 12 }}
+          style={{
+            width: "100%",
+            height: "auto",
+            borderRadius: 12,
+            objectFit: "cover",
+          }}
         />
       </ImageBox>
       <StepsBox>
@@ -1034,82 +1114,77 @@ const TryOnGuide = () => {
   );
 };
 
-import { Card, CardContent, CardMedia } from "@mui/material";
-
-const categories = ["Tất cả", "Trên", "Dưới", "Bộ đầy đủ"];
-
-const items = Array.from({ length: 10 }, (_, i) => ({
-  id: i,
-  image: "/coat.png", // Replace with actual image path
-  label: "Demo",
-}));
-
 function WardrobeUI() {
-  const [selectedTab, setSelectedTab] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setSelectedTab(newValue);
-  };
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box p={2}>
+    <Box p={{ xs: 0, md: 2 }}>
+      {/* Header + Filter */}
       <Box
         display={"flex"}
+        flexDirection={isMobile ? "column" : "row"}
         justifyContent={"space-between"}
-        alignItems={"center"}
-        gap={"10px"}>
+        alignItems={isMobile ? "flex-start" : "center"}
+        gap={1.5}>
         <Typography variant='body1' fontWeight={"bold"} gutterBottom>
           Tất cả quần áo của bạn
         </Typography>
-        <Box display={"flex"} gap={"6px"}>
-          <Typography
-            variant='body2'
-            sx={{
-              p: "4px 6px",
-              borderRadius: "15px",
-              bgcolor: "#2E68FD",
-              color: "white",
-            }}>
-            Tất cả
-          </Typography>
-          <Typography
-            variant='body2'
-            sx={{ p: "4px 6px", borderRadius: "15px", bgcolor: "#E4E4E4" }}>
-            Trên{" "}
-          </Typography>
-          <Typography
-            variant='body2'
-            sx={{ p: "4px 6px", borderRadius: "15px", bgcolor: "#E4E4E4" }}>
-            Dưới
-          </Typography>
-          <Typography
-            variant='body2'
-            sx={{ p: "4px 6px", borderRadius: "15px", bgcolor: "#E4E4E4" }}>
-            Bộ đầy đủ
-          </Typography>
+
+        {/* Filter chips, scrollable on mobile */}
+        <Box
+          display='flex'
+          gap={"6px"}
+          overflow={isMobile ? "auto" : "visible"}
+          sx={{
+            width: isMobile ? "90%" : "auto",
+            whiteSpace: "nowrap",
+            paddingBottom: isMobile ? 1 : 0,
+          }}>
+          {["Tất cả", "Trên", "Dưới", "Bộ đầy đủ"].map((label, idx) => (
+            <Typography
+              key={label}
+              variant='body2'
+              sx={{
+                p: "4px 10px",
+                borderRadius: "15px",
+                bgcolor: idx === 0 ? "#2E68FD" : "#E4E4E4",
+                color: idx === 0 ? "white" : "black",
+                fontSize: isMobile ? "13px" : "14px",
+                cursor: "pointer",
+                flexShrink: 0,
+              }}>
+              {label}
+            </Typography>
+          ))}
         </Box>
       </Box>
 
+      {/* Danh sách quần áo */}
       <Box
-        my={2}
+        mt={2}
         display='flex'
-        justifyContent={"space-between"}
+        justifyContent={isMobile ? "flex-start" : "space-between"}
         gap={1}
-        flexWrap={"wrap"}
-        overflow='auto'>
+        flexWrap='wrap'>
         {[...Array(5)].map((_, i) => (
           <Box
             key={i}
             sx={{
-              width: 75,
+              width: isMobile ? "30%" : 75,
               height: 87,
               position: "relative",
               bgcolor: "#E6E6E6",
               borderRadius: 1,
+              flexShrink: 0,
             }}>
             <Avatar
               src={user_aigen}
-              sx={{ width: 75, height: 87, borderRadius: 1 }}
+              sx={{
+                width: "100%",
+                height: "100%",
+                borderRadius: 1,
+              }}
             />
             <Typography
               sx={{
@@ -1145,16 +1220,16 @@ import meo7 from "../../images/meo7.png";
 import meo8 from "../../images/meo8.png";
 import meo9 from "../../images/meo9.png";
 import meo10 from "../../images/meo10.png";
-import meo11 from "../../images/meo1.png";
-import meo12 from "../../images/meo2.png";
-import meo13 from "../../images/meo3.png";
-import meo14 from "../../images/meo4.png";
-import meo15 from "../../images/meo5.png";
-import meo16 from "../../images/meo6.png";
-import meo17 from "../../images/meo7.png";
-import meo18 from "../../images/meo8.png";
-import meo19 from "../../images/meo9.png";
-import meo20 from "../../images/meo10.png";
+import meo11 from "../../images/meo11.png";
+import meo12 from "../../images/meo12.png";
+import meo13 from "../../images/meo13.png";
+import meo14 from "../../images/meo14.png";
+import meo15 from "../../images/meo15.png";
+import meo16 from "../../images/meo16.png";
+import meo17 from "../../images/meo17.png";
+import meo18 from "../../images/meo18.png";
+import meo19 from "../../images/meo19.png";
+import meo20 from "../../images/meo20.png";
 const StyledModal = styled(Modal)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -1169,37 +1244,33 @@ const ModalContent = styled(Box)(({ theme }) => ({
   width: "90%",
   maxWidth: 600,
   position: "relative",
+  maxHeight: "90vh",
+  overflowY: "auto",
   [theme.breakpoints.down("sm")]: {
     width: "95%",
     padding: theme.spacing(2),
   },
 }));
 
-const SectionTitle = styled(Typography)(({ theme }) => ({
-  fontWeight: 600,
-  marginBottom: theme.spacing(1),
-  color: "#333",
-}));
-
 const ImageGrid = styled(Grid)(({ theme }) => ({
   marginBottom: theme.spacing(2),
-  "& .MuiCheckbox-root": {
-    padding: 0,
-    marginRight: theme.spacing(0.5),
-  },
 }));
 
 const ImageItem = styled(Box)(({ theme }) => ({
   display: "flex",
+  justifyContent: "center",
   alignItems: "center",
-  marginBottom: theme.spacing(1),
   "& img": {
     objectFit: "cover",
+    width: 110,
+    height: 160,
     borderRadius: 4,
-    marginRight: theme.spacing(1),
   },
   [theme.breakpoints.down("sm")]: {
-    "& img": {},
+    "& img": {
+      width: 90,
+      height: 130,
+    },
   },
 }));
 
@@ -1210,114 +1281,102 @@ const CloseButton = styled(Button)(({ theme }) => ({
 }));
 
 function ImageModerationModal({ open, setOpen }) {
-  const [checkedValid, setCheckedValid]: any = useState({
+  const [checkedValid, setCheckedValid] = useState({
     img1: false,
     img2: false,
     img3: false,
     img4: false,
   });
-  const [checkedInvalid, setCheckedInvalid]: any = useState({
+  const [checkedInvalid, setCheckedInvalid] = useState({
     img5: false,
     img6: false,
     img7: false,
     img8: false,
   });
 
-  const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
-  const handleCheckboxChange = (setChecked, name) => (event) => {
-    setChecked((prev) => ({
-      ...prev,
-      [name]: event.target.checked,
-    }));
-  };
 
   const validImages = [
     { src: meo1, id: "img1" },
-    { src: meo2, id: "img1" },
-    { src: meo3, id: "img1" },
-    { src: meo4, id: "img1" },
-    { src: meo5, id: "img1" },
+    { src: meo2, id: "img2" },
+    { src: meo3, id: "img3" },
+    { src: meo4, id: "img4" },
+    { src: meo5, id: "img5" },
   ];
 
   const invalidImages = [
-    { src: meo6, id: "img1" },
-    { src: meo7, id: "img1" },
-    { src: meo8, id: "img1" },
-    { src: meo9, id: "img1" },
-    { src: meo10, id: "img1" },
+    { src: meo6, id: "img6" },
+    { src: meo7, id: "img7" },
+    { src: meo8, id: "img8" },
+    { src: meo9, id: "img9" },
+    { src: meo10, id: "img10" },
   ];
 
   return (
-    <div>
-      <StyledModal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby='modal-title'
-        aria-describedby='modal-description'>
-        <ModalContent>
-          <Typography
-            onClick={handleClose}
-            sx={{ position: "absolute", top: "15px", right: "15px" }}>
-            ✖
-          </Typography>
-          <Typography id='modal-title' variant='h6' gutterBottom>
-            Mẹo tải hình ảnh
-          </Typography>
-          <Typography
-            id='modal-description'
-            variant='body2'
-            color='textSecondary'
-            gutterBottom>
-            Độ phân giải hình ảnh được đề xuất: từ 512x512 pixel đến 2048x2048
-            pixel
-          </Typography>
-          <hr style={{ margin: "10px 0" }} />
-          <Typography variant='body2' gutterBottom>
-            ✔ Ví dụ ảnh tốt
-          </Typography>
-          <Typography variant='caption' color='#787878' display='block' mb={2}>
-            Nằm trên nền, một bộ trang phục và đứng thẳng.
-          </Typography>
-          <ImageGrid container>
-            {validImages.map((image) => (
-              <Grid item xs={6} sm={2.4} key={image.id}>
-                <ImageItem>
-                  <img
-                    src={image.src}
-                    width={110}
-                    height={160}
-                    alt={image.id}
-                  />
-                </ImageItem>
-              </Grid>
-            ))}
-          </ImageGrid>
-          <Typography variant='body2' gutterBottom>
-            ❌ Ví dụ ảnh tệ
-          </Typography>
-          <Typography variant='caption' color='#787878' display='block' mb={2}>
-            nhiều trang phục, bối cảnh phức tạp, quần áo được giấu và gấp lại,
-            tư thế phức tạp.
-          </Typography>
-          <ImageGrid container>
-            {invalidImages.map((image) => (
-              <Grid item xs={6} sm={2.4} key={image.id}>
-                <ImageItem>
-                  <img
-                    src={image.src}
-                    width={110}
-                    height={160}
-                    alt={image.id}
-                  />
-                </ImageItem>
-              </Grid>
-            ))}
-          </ImageGrid>
-        </ModalContent>
-      </StyledModal>
-    </div>
+    <StyledModal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby='modal-title'
+      aria-describedby='modal-description'>
+      <ModalContent>
+        <Typography
+          onClick={handleClose}
+          sx={{
+            position: "absolute",
+            top: "15px",
+            right: "15px",
+            cursor: "pointer",
+          }}>
+          ✖
+        </Typography>
+        <Typography id='modal-title' variant='h6' gutterBottom>
+          Mẹo tải hình ảnh
+        </Typography>
+        <Typography
+          id='modal-description'
+          variant='body2'
+          color='textSecondary'
+          gutterBottom>
+          Độ phân giải hình ảnh được đề xuất: từ 512x512 pixel đến 2048x2048
+          pixel
+        </Typography>
+        <hr style={{ margin: "10px 0" }} />
+        <Typography variant='body2' gutterBottom>
+          ✔ Ví dụ ảnh tốt
+        </Typography>
+        <Typography variant='caption' color='#787878' display='block' mb={2}>
+          Nằm trên nền, một bộ trang phục và đứng thẳng.
+        </Typography>
+
+        <ImageGrid container spacing={1}>
+          {validImages.map((image) => (
+            <Grid item xs={4} sm={2.4} key={image.id}>
+              <ImageItem>
+                <img src={image.src} alt={image.id} />
+              </ImageItem>
+            </Grid>
+          ))}
+        </ImageGrid>
+
+        <Typography variant='body2' gutterBottom>
+          ❌ Ví dụ ảnh tệ
+        </Typography>
+        <Typography variant='caption' color='#787878' display='block' mb={2}>
+          nhiều trang phục, bối cảnh phức tạp, quần áo được giấu và gấp lại, tư
+          thế phức tạp.
+        </Typography>
+
+        <ImageGrid container spacing={1}>
+          {invalidImages.map((image) => (
+            <Grid item xs={4} sm={2.4} key={image.id}>
+              <ImageItem>
+                <img src={image.src} alt={image.id} />
+              </ImageItem>
+            </Grid>
+          ))}
+        </ImageGrid>
+      </ModalContent>
+    </StyledModal>
   );
 }
 
@@ -1393,16 +1452,11 @@ function ImageModerationModal2({ open, setOpen }) {
             Ảnh đơn giản chụp toàn thân hoặc nửa thân phía trước và tạo dáng đơn
             giản không mặc quần áo.
           </Typography>
-          <ImageGrid container>
+          <ImageGrid container spacing={1}>
             {validImages.map((image) => (
-              <Grid item xs={6} sm={2.4} key={image.id}>
+              <Grid item xs={4} sm={2.4} key={image.id}>
                 <ImageItem>
-                  <img
-                    src={image.src}
-                    width={110}
-                    height={160}
-                    alt={image.id}
-                  />
+                  <img src={image.src} alt={image.id} />
                 </ImageItem>
               </Grid>
             ))}
@@ -1414,16 +1468,11 @@ function ImageModerationModal2({ open, setOpen }) {
             Không sử dụng ảnh nhóm và không tạo dáng phức tạp với quần giấu bên
             trong.
           </Typography>
-          <ImageGrid container>
+          <ImageGrid container spacing={1}>
             {invalidImages.map((image) => (
-              <Grid item xs={6} sm={2.4} key={image.id}>
+              <Grid item xs={4} sm={2.4} key={image.id}>
                 <ImageItem>
-                  <img
-                    src={image.src}
-                    width={110}
-                    height={160}
-                    alt={image.id}
-                  />
+                  <img src={image.src} alt={image.id} />
                 </ImageItem>
               </Grid>
             ))}
@@ -1450,6 +1499,7 @@ const MainImage = styled("img")(({ theme }) => ({
   borderRadius: 8,
   [theme.breakpoints.down("sm")]: {
     maxWidth: 300,
+    height: "400px",
   },
 }));
 
