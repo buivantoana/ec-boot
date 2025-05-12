@@ -14,6 +14,7 @@ const AiVideoView = (props: Props) => {
     <Box
       sx={{
         background: "linear-gradient(to bottom, #e3f2fd, #ffffff)",
+        overflowX:"hidden"
       }}>
       <VideoSection />
       <Container

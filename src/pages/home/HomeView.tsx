@@ -13,7 +13,7 @@ type Props = {};
 
 const HomeView = (props: Props) => {
   return (
-    <Box>
+    <Box sx={{overflowX:"hidden"}}>
       <BannerHero />
       <Container
         maxWidth="lg"

@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
 import VirtualTryOnBanner from './VirtualTryOnBanner'
 import shoppe from "../../images/image 13.png";
@@ -13,7 +13,7 @@ type Props = {}
 
 const AiGenView = (props: Props) => {
     return (
-        <>
+        <Box sx={{overflowX:"hidden"}}>
             <VirtualTryOnBanner />
             <Container
                 maxWidth="lg"
@@ -42,7 +42,7 @@ const AiGenView = (props: Props) => {
                 <FAQSection />
             </Container>
             <CTASection />
-        </>
+        </Box>
     )
 }
 
