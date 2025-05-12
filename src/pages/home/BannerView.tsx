@@ -29,8 +29,8 @@ const BannerHero = () => {
         pt: { xs: 8, md: 12 },
       }}>
         <Hidden smDown>
-      <Box position={"absolute"} right={"-200px"} bottom={"-5px"} zIndex={0}>
-        <img src={bg1} width={"100%"} height={"100%"} alt="" />
+      <Box position={"absolute"} right={"-600px"} bottom={"-5px"} zIndex={0}>
+        <img src={bg1} width={"100%"} height={"600px"} alt="" />
       </Box>
       <Box position={"absolute"} right={"-200px"} bottom={"-5px"} zIndex={0}>
         <img src={bg2} width={"100%"} height={"100%"} alt="" />

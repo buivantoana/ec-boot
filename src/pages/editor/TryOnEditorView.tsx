@@ -996,8 +996,8 @@ export default function TryOnEditorView() {
               alignItems: "center",
               paddingBottom: { xs: "50px", md: 0 },
             }}>
-            <TryOnResult />
-            {/* <TryOnGuide /> */}
+            {/* <TryOnResult /> */}
+            <TryOnGuide />
           </Box>
         </Grid>
       </Grid>
