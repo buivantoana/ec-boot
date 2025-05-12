@@ -8,6 +8,7 @@ import FeatureGridSection from './FeatureGridSection';
 import Testimonials from '../home/Testimonials';
 import FAQSection from '../home/FAQSection';
 import CTASection from '../home/CTASection';
+import ToolCardSection2 from './ToolCardSection2';
 type Props = {}
 
 const AiGenView = (props: Props) => {
@@ -24,7 +25,7 @@ const AiGenView = (props: Props) => {
                     gap: "30px",
                     alignItems: "center",
                 }}>
-                <Typography sx={{ fontSize: "16px" }} color='#666666'>
+                <Typography sx={{ fontSize: "16px" }} textAlign={"center"} color='#666666'>
                     Được tin tưởng bởi Người bán và các KOL thời trang
                 </Typography>
                 <img
@@ -33,7 +34,7 @@ const AiGenView = (props: Props) => {
                 />
                 <ToolCardSection />
                 <EcBoostIntroBlocks />
-                <ToolCardSection />
+                <ToolCardSection2 />
                 <FeatureGridSection />
             </Container>
             <Testimonials />

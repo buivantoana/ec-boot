@@ -4,6 +4,7 @@ import ImageIcon from "@mui/icons-material/Image";
 import LockIcon from "@mui/icons-material/Lock";
 import TravelExploreIcon from "@mui/icons-material/TravelExplore";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { useNavigate } from "react-router-dom";
 
 const features = [
   {
@@ -33,6 +34,7 @@ const features = [
 ];
 
 export default function FeatureGridSection() {
+  const navigate = useNavigate()
   return (
     <Box sx={{ py: { xs: 6, md: 10 }, px: 2 }}>
       <Container maxWidth="lg">
@@ -40,7 +42,7 @@ export default function FeatureGridSection() {
           variant='h4'
           align='center'
           gutterBottom
-          sx={{ fontWeight: "bold", color: "#333", my: "30px" }}>
+          sx={{ fontWeight: "bold", color: "#333", my: "30px",fontSize:{xs:"1.7rem",md:"2.125rem"} }}>
           Ưu điểm của AI Style Gen
         </Typography>
 
@@ -59,7 +61,7 @@ export default function FeatureGridSection() {
         </Grid>
 
         <Box display="flex" justifyContent="center" mt={6}>
-          <Button variant="contained" sx={{borderRadius:1,fontWeight:"bold"}} endIcon={<ArrowForwardIcon />}  size="large">
+          <Button variant="contained" onClick={()=>navigate("/editor")} sx={{borderRadius:1,fontWeight:"bold"}} endIcon={<ArrowForwardIcon />}  size="large">
             Thử ngay
           </Button>
         </Box>

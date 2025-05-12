@@ -19,7 +19,7 @@ const testimonials = [
     title: "Chủ cửa hàng thời trang beeso",
     avatar: "/avatar1.jpg",
     content:
-      "Ecboost saves me dozens of hours each week in responding to messages.  customer questions while still looking...",
+      "Since integrating Ecboost's AI chatbot, my shop’s revenue has increased significantly! The chatbot responds extremely quickly, provides smart prod..",
   },
   {
     name: "James Carter",
@@ -42,7 +42,7 @@ const testimonials2 = [
     title: "Chủ cửa hàng thời trang beeso",
     avatar: "/avatar1.jpg",
     content:
-      "Ecboost saves me dozens of hours each week in responding to messages. customer questions while still looking...",
+      "Since integrating Ecboost's AI chatbot, my shop’s revenue has increased significantly! The chatbot responds extremely quickly, provides smart prod..",
   },
   {
     name: "James Carter",
@@ -93,7 +93,7 @@ export default function Testimonials() {
         variant='h4'
         align='center'
         gutterBottom
-        sx={{ fontWeight: "bold", color: "#333", my: "30px" }}>
+        sx={{ fontWeight: "bold", color: "#333", my: "30px" ,fontSize:{xs:"1.7rem",md:"2.125rem"}}}>
         Đánh giá của người dùng EcBoost
       </Typography>
       <Typography
@@ -108,10 +108,11 @@ export default function Testimonials() {
         container
         width={"100%"}
         alignItems={{ xs: "center" }}
+        mb={{xs:0,md:4}}
         justifyContent={"center"}
-        spacing={3}>
+        spacing={{xs:0, md:3}}>
         {testimonials.map((t, i) => (
-          <Grid item xs={12} sm={6} md={3.5} key={i}>
+          <Grid item xs={12} sm={6} md={3.5} mb={{xs:2,md:0}}  key={i}>
             <Card elevation={1} sx={{ height: "80%", borderRadius: 3 }}>
               <CardContent>
                 <Box display='flex' gap={0.5} mb={1}>
@@ -149,9 +150,9 @@ export default function Testimonials() {
         alignItems={{ xs: "center" }}
         sx={{ marginLeft: { md: "-10%" }, mt: "10px" }}
         flexWrap={{ md: "nowrap" }}
-        spacing={3}>
+        spacing={{xs:0, md:3}}>
         {testimonials2.map((t, i) => (
-          <Grid item xs={12} sm={6} md={3.8} key={i}>
+          <Grid item xs={12} sm={6} mb={{xs:2,md:0}} md={3.8} key={i}>
             <Card elevation={1} sx={{ height: "80%", borderRadius: 3 }}>
               <CardContent>
                 <Box display='flex' gap={0.5} mb={1}>

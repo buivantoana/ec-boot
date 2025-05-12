@@ -37,7 +37,7 @@ const ToolCardSection = () => {
         variant='h4'
         align='center'
         gutterBottom
-        sx={{ fontWeight: "bold", color: "#333", my: "30px" }}>
+        sx={{ fontWeight: "bold", color: "#333", my: "30px",fontSize:{xs:"1.7rem",md:"2.125rem"} }}>
         Công cụ AI vượt trội hàng đầu cho TMDT
       </Typography>
       <Typography

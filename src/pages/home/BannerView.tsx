@@ -9,12 +9,15 @@ import {
   CardContent,
   Stack,
   Avatar,
+  Hidden,
 } from "@mui/material";
 import user1 from "../../images/Avatar Image.png";
 import user2 from "../../images/Avatar Image (1).png";
 import user3 from "../../images/Avatar Image (2).png";
 import chart from "../../images/Chart 2.png";
 import kol from "../../images/image 4.png";
+import bg1 from "../../images/Rectangle 27.png"
+import bg2 from "../../images/Rectangle 28.png"
 const BannerHero = () => {
   return (
     <Box
@@ -25,7 +28,15 @@ const BannerHero = () => {
         overflow: "hidden",
         pt: { xs: 8, md: 12 },
       }}>
-      <Container maxWidth='lg' sx={{ paddingTop: "80px" }}>
+        <Hidden smDown>
+      <Box position={"absolute"} right={"-200px"} bottom={"-5px"} zIndex={0}>
+        <img src={bg1} width={"100%"} height={"100%"} alt="" />
+      </Box>
+      <Box position={"absolute"} right={"-200px"} bottom={"-5px"} zIndex={0}>
+        <img src={bg2} width={"100%"} height={"100%"} alt="" />
+      </Box>
+        </Hidden>
+      <Container maxWidth='lg' sx={{ paddingTop: "80px", position: "relative", zIndex: "1" }}>
         <Grid container spacing={12}>
           {/* Left Content */}
           <Grid item xs={12} md={6}>

@@ -41,7 +41,7 @@ const FAQSection = () => {
         <Typography variant='h4'
           align='center'
           gutterBottom
-          sx={{ fontWeight: "bold", color: "#333", my: "30px" }}>
+          sx={{ fontWeight: "bold", color: "#333", my: "30px",fontSize:{xs:"1.7rem",md:"2.125rem"} }}>
           Câu hỏi thường gặp
         </Typography>
         <Typography variant="body1" align="center" color="text.secondary" mb={4}>

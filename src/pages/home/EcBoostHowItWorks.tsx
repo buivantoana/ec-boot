@@ -30,7 +30,7 @@ export default function EcBoostHowItWorks() {
         variant='h4'
         align='center'
         gutterBottom
-        sx={{ fontWeight: "bold", color: "#333", my: "30px" }}>
+        sx={{ fontWeight: "bold", color: "#333", my: "30px" ,fontSize:{xs:"1.7rem",md:"2.125rem"}}}>
         EcBoost hoạt động như thế nào?
       </Typography>
       <Typography variant='body1' textAlign='center' mb={4}>
@@ -56,7 +56,7 @@ export default function EcBoostHowItWorks() {
                 display: "flex",
                 alignItems: "center",
                 gap: 1,
-                px: 3,
+                px: {xs:1, md:3},
                 py: 1,
                 bgcolor: index === 0 ? "white" : "unset",
                 borderRadius: 1.5,

@@ -117,7 +117,7 @@ export default function PricingSection() {
       <Typography  variant='h4'
           align='center'
           gutterBottom
-          sx={{ fontWeight: "bold", color: "#333", my: "30px" }}>
+          sx={{ fontWeight: "bold", color: "#333", my: "30px" ,fontSize:{xs:"1.7rem",md:"2.125rem"}}}>
         Bảng giá linh hoạt EcBoost
       </Typography>
       <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4 }}>
@@ -130,10 +130,10 @@ export default function PricingSection() {
         onChange={(e, value) => value && setBilling(value)}
         sx={{ mb: 8, backgroundColor: '#f3f4f6', borderRadius: "10px", p: 0.5 }}
       >
-        <ToggleButton value="monthly" sx={{ textTransform: 'none', px: 3, border: 'none',borderRadius:"10px !important" }}>
+        <ToggleButton value="monthly" sx={{ textTransform: 'none',  px: {xs:1, md:3}, border: 'none',borderRadius:"10px !important" }}>
           Hàng tháng
         </ToggleButton>
-        <ToggleButton value="yearly" sx={{ textTransform: 'none', px: 3, border: 'none', fontWeight: 'bold', color: '#2563eb',borderRadius:"10px !important"  }}>
+        <ToggleButton value="yearly" sx={{ textTransform: 'none',  px: {xs:1, md:3}, border: 'none', fontWeight: 'bold', color: '#2563eb',borderRadius:"10px !important"  }}>
           Hàng năm - save 40%
         </ToggleButton>
       </ToggleButtonGroup>
