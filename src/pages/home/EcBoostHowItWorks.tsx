@@ -13,8 +13,8 @@ import group from "../../images/Group 39530.png";
 import CheckIcon from "@mui/icons-material/Check";
 import chat from "../../images/Frame 1321315984.png";
 const tabItems = [
+  { label: "AI Chatbot", icon: "🤖" },
   { label: "Style gen", icon: "🧢" },
-  { label: "Chatbot", icon: "🤖" },
   { label: "Text to voice", icon: "🎙️" },
   { label: "Video product", icon: "📹" },
 ];
