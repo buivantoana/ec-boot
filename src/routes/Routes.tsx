@@ -11,6 +11,8 @@ import AiGenController from "../pages/ai_gen/AiGenController";
 import TryOnEditorController from "../pages/editor/TryOnEditorController";
 import AiVideoController from "../pages/ai_video/AiVideoController";
 import AiChatController from "../pages/ai-chat/AiChatController";
+import LoginController from "../pages/login/LoginController";
+import PayController from "../pages/pay/PayController";
 
 const Router = () => {
   const context: any = useCoursesContext();
@@ -27,6 +29,8 @@ const Router = () => {
         {/* <Route path='' element={<DashBoardController />} /> */}
       </Route>
       <Route path='editor' element={<TryOnEditorController />} />
+      <Route path='login' element={<LoginController />} />
+      <Route path='pay' element={<PayController />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   );

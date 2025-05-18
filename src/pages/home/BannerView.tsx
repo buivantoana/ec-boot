@@ -14,10 +14,21 @@ import {
 import user1 from "../../images/Avatar Image.png";
 import user2 from "../../images/Avatar Image (1).png";
 import user3 from "../../images/Avatar Image (2).png";
-import chart from "../../images/Chart 2.png";
-import kol from "../../images/image 4.png";
-import bg1 from "../../images/Rectangle 27.png"
-import bg2 from "../../images/Rectangle 28.png"
+import fb from "../../images/fbbanner.png";
+import linefb from "../../images/linefbbanner.png";
+import whatapp from "../../images/whatapp.png";
+import linewhatapp from "../../images/linewhatapp.png";
+import message from "../../images/message.png";
+import linemessage from "../../images/linemessage.png";
+import web from "../../images/web.png";
+import lineweb from "../../images/lineweb.png";
+import zalo from "../../images/zalo.png";
+import linezalo from "../../images/linezalo.png";
+import linked from "../../images/linked.png";
+import linelinked from "../../images/linelinked.png";
+import kol from "../../images/satisfied-lovely-woman-holds-modern-cell-phone 1 1.png";
+import bg1 from "../../images/Rectangle 27.png";
+import bg2 from "../../images/Rectangle 28.png";
 const BannerHero = () => {
   return (
     <Box
@@ -28,43 +39,58 @@ const BannerHero = () => {
         overflow: "hidden",
         pt: { xs: 8, md: 12 },
       }}>
-        <Hidden smDown>
-      <Box position={"absolute"} right={"-600px"} bottom={"-5px"} zIndex={0}>
-        <img src={bg1} width={"100%"} height={"600px"} alt="" />
-      </Box>
-      <Box position={"absolute"} right={"-200px"} bottom={"-5px"} zIndex={0}>
-        <img src={bg2} width={"100%"} height={"100%"} alt="" />
-      </Box>
-        </Hidden>
-      <Container maxWidth='lg' sx={{ paddingTop: "80px", position: "relative", zIndex: "1" }}>
+      <Hidden smDown>
+        <Box position={"absolute"} right={"-600px"} bottom={"-5px"} zIndex={0}>
+          <img src={bg1} width={"100%"} height={"600px"} alt='' />
+        </Box>
+        <Box position={"absolute"} right={"-200px"} bottom={"-5px"} zIndex={0}>
+          <img src={bg2} width={"100%"} height={"100%"} alt='' />
+        </Box>
+      </Hidden>
+      <Container
+        maxWidth='lg'
+        sx={{ paddingTop: "80px", position: "relative", zIndex: "1" }}>
         <Grid container spacing={12}>
           {/* Left Content */}
           <Grid item xs={12} md={6}>
             <Typography
               variant='h1'
               fontWeight='bold'
-              sx={{ mb: 6, mt: "15px", fontSize: { xs: 30, md: 42 } }}
+              sx={{
+                mb: 6,
+                mt: "15px",
+                fontSize: { xs: 30, md: 42 },
+                color: "#FFB617",
+              }}
               gutterBottom>
-              Tăng doanh số với{" "}
+              Bán tốt hơn,nổ nghìn đơn với
               <Box component='span' color='primary.main'>
-                EcBoot
+                {" "}
+                EcBoot AI
               </Box>{" "}
-              thông minh
             </Typography>
             <Typography
               variant='body1'
-              color='text.secondary'
+              color='black'
+              fontWeight={"500"}
               sx={{ mb: 6, fontSize: { xs: 15, md: 18 } }}>
-              Lorem Ipsum is{" "}
-              <Box component='span' fontWeight='bold'>
-                simply dummy text
-              </Box>{" "}
-              of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s,
+              Tăng tốc công việc – Tiết kiệm thời gian & tiền bạc Tăng 50% tỉ lệ
+              chốt đơn - tất cả trong một
             </Typography>
-            <Button variant='contained' size='large' sx={{ borderRadius: 1 }}>
-              Bắt đầu miễn phí
-            </Button>
+            <Box>
+              <Button
+                variant='contained'
+                size='large'
+                sx={{ borderRadius: 1, mr: "20px" }}>
+                Bắt đầu miễn phí
+              </Button>
+              <Button
+                variant='outlined'
+                size='large'
+                sx={{ borderRadius: 1, background: "white" }}>
+                Tư vấn trực tiếp
+              </Button>
+            </Box>
           </Grid>
 
           {/* Right Image */}
@@ -88,13 +114,125 @@ const BannerHero = () => {
               {/* Biểu đồ nổi */}
               <Box
                 component='img'
-                src={chart} // 👉 Đổi thành link ảnh biểu đồ
+                src={fb} // 👉 Đổi thành link ảnh biểu đồ
                 alt='Chart'
                 sx={{
                   position: "absolute",
                   top: 0,
                   right: { xs: "5%", md: "10%" },
-                  width: { xs: 220, md: 480 },
+                }}
+              />
+              <Box
+                component='img'
+                src={linefb} // 👉 Đổi thành link ảnh biểu đồ
+                alt='Chart'
+                sx={{
+                  position: "absolute",
+                  top: { xs: "23%", md: "16%" },
+                  right: { xs: "5%", md: "10%" },
+                }}
+              />
+              <Box
+                component='img'
+                src={whatapp} // 👉 Đổi thành link ảnh biểu đồ
+                alt='Chart'
+                sx={{
+                  position: "absolute",
+                  top: "30%",
+
+                  right: { xs: "-2%", md: "-5%" },
+                }}
+              />
+              <Box
+                component='img'
+                src={linewhatapp} // 👉 Đổi thành link ảnh biểu đồ
+                alt='Chart'
+                sx={{
+                  position: "absolute",
+                  top: { xs: "43%", md: "40%" },
+                  right: { xs: "5%", md: "-3%" },
+                }}
+              />
+              <Box
+                component='img'
+                src={message} // 👉 Đổi thành link ảnh biểu đồ
+                alt='Chart'
+                sx={{
+                  position: "absolute",
+                  top: { xs: "50%", md: "55%" },
+
+                  right: { xs: "-10%", md: "-20%" },
+                }}
+              />
+              <Box
+                component='img'
+                src={linemessage} // 👉 Đổi thành link ảnh biểu đồ
+                alt='Chart'
+                sx={{
+                  position: "absolute",
+                  top: "68%",
+                  right: { xs: "5%", md: "-14%" },
+                }}
+              />
+              <Box
+                component='img'
+                src={web} // 👉 Đổi thành link ảnh biểu đồ
+                alt='Chart'
+                sx={{
+                  position: "absolute",
+                  top: { xs: "-5%", md: 0 },
+                  left: { xs: "-5%", md: "2%" },
+                }}
+              />
+              <Box
+                component='img'
+                src={lineweb} // 👉 Đổi thành link ảnh biểu đồ
+                alt='Chart'
+                sx={{
+                  position: "absolute",
+                  top: "15%",
+                  left: { xs: "5%", md: "10%" },
+                }}
+              />
+              <Box
+                component='img'
+                src={zalo} // 👉 Đổi thành link ảnh biểu đồ
+                alt='Chart'
+                width={"70px"}
+                sx={{
+                  position: "absolute",
+                  top: { xs: "18%", md: "25%" },
+                  left: { xs: "-4%", md: "-15%" },
+                }}
+              />
+              <Box
+                component='img'
+                src={linezalo} // 👉 Đổi thành link ảnh biểu đồ
+                alt='Chart'
+                sx={{
+                  position: "absolute",
+                  top: "38%",
+                  left: { xs: "5%", md: "-10%" },
+                }}
+              />
+              <Box
+                component='img'
+                src={linked} // 👉 Đổi thành link ảnh biểu đồ
+                alt='Chart'
+                sx={{
+                  position: "absolute",
+                  top: { xs: "52%", md: "60%" },
+                  left: { xs: "-4%", md: "-20%" },
+                }}
+              />
+              <Box
+                component='img'
+                src={linelinked} // 👉 Đổi thành link ảnh biểu đồ
+                alt='Chart'
+                sx={{
+                  position: "absolute",
+                  top: { xs: "64%", md: "68%" },
+                  left: { xs: "0%", md: "-15%" },
                 }}
               />
 

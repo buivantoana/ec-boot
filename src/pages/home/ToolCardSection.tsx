@@ -8,7 +8,7 @@ import {
   CardContent,
   CardMedia,
 } from "@mui/material";
-import toolimage1 from "../../images/image.png";
+import toolimage1 from "../../images/card1.png";
 import toolimage2 from "../../images/image (1).png";
 import toolimage3 from "../../images/image (2).png";
 
@@ -16,18 +16,19 @@ const ToolCardSection = () => {
   const tools = [
     {
       image: toolimage1,
-      title: "AI Style Gen",
-      description: "Hỗ trợ tạo ảnh cho shop thời trang",
+      title: "🚀 Tăng tỷ lệ chốt đơn đến 30%",
+      description:
+        "Không bỏ lỡ khách hàng vì tương tác chậm . Tối ưu kịch bản trả lời khách hàng",
     },
     {
       image: toolimage2,
-      title: "AI Chat",
-      description: "Hỗ trợ tích hợp chatbot cho các chủ shop",
+      title: " 💰Tiết kiệm 80% chi phí nhân sự",
+      description: "Giảm tải quản lý nhân sự . Nâng cao hiệu suất công việc",
     },
     {
       image: toolimage3,
-      title: "AI Video Product",
-      description: "Hỗ trợ tạo video giới thiệu sản phẩm - tạo video quảng cáo",
+      title: "🕒 Tiết kiệm 90% thời gian làm ảnh/video",
+      description: "Tạo video quảng cáo siêu tốc, hiệu quả, chất lượng",
     },
   ];
 
@@ -37,15 +38,20 @@ const ToolCardSection = () => {
         variant='h4'
         align='center'
         gutterBottom
-        sx={{ fontWeight: "bold", color: "#333", my: "30px",fontSize:{xs:"1.7rem",md:"2.125rem"} }}>
-        Công cụ AI vượt trội hàng đầu cho TMDT
+        sx={{
+          fontWeight: "bold",
+          color: "#333",
+          my: "30px",
+          fontSize: { xs: "1.7rem", md: "2.125rem" },
+        }}>
+        Công cụ AI vượt trội hàng đầu dành cho TMĐT Thích hợp cho mọi lĩnh vực
       </Typography>
       <Typography
         variant='subtitle1'
         align='center'
         gutterBottom
         sx={{ color: "#666", mb: 6 }}>
-        Cùng sáng tạo với các công cụ được sử dụng từ EcBoost
+        Tiếp cận AI đơn giản, nhanh chóng, chi phí siêu thấp
       </Typography>
       <Grid container gap='15px' justifyContent='space-between'>
         {tools.map((tool, index) => (

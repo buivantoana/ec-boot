@@ -17,17 +17,21 @@ import image4 from "../../images/tts.png";
 import StarIcon from "@mui/icons-material/Star";
 import { useNavigate } from "react-router-dom";
 
-
 export default function EcBoostIntroBlocks() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <>
-      <Container  sx={{ my: 6 }}>
+      <Container sx={{ my: 6 }}>
         <Typography
           variant='h4'
           align='center'
           gutterBottom
-          sx={{ fontWeight: "bold", color: "#333", my: "30px",fontSize:{xs:"1.7rem",md:"2.125rem"} }}>
+          sx={{
+            fontWeight: "bold",
+            color: "#333",
+            my: "30px",
+            fontSize: { xs: "1.7rem", md: "2.125rem" },
+          }}>
           Công cụ AI thông minh hiệu quả cao cho mọi nhu cầu,
           <br />
           mọi ngành nghề
@@ -44,7 +48,11 @@ export default function EcBoostIntroBlocks() {
         {/* Section 1 */}
         <Grid container spacing={4} mb={10}>
           <Grid item xs={12} md={6}>
-            <Typography variant={'h1'} sx={{fontSize:{xs:"1.7rem",md:"2.5rem"}}} fontWeight='bold' gutterBottom>
+            <Typography
+              variant={"h1"}
+              sx={{ fontSize: { xs: "1.7rem", md: "2.5rem" } }}
+              fontWeight='bold'
+              gutterBottom>
               Lorem Ipsum is simply dummy text
             </Typography>
             <Typography
@@ -75,12 +83,12 @@ export default function EcBoostIntroBlocks() {
 
             <Button
               variant='contained'
-              onClick={()=>navigate("/ai-gen")}
+              onClick={() => navigate("/ai-gen")}
               sx={{
                 borderRadius: 1,
-                fontSize:{xs:"14px",md:"18px"},
+                fontSize: { xs: "14px", md: "18px" },
                 px: 4,
-                py: {xs:1,md:1.5},
+                py: { xs: 1, md: 1.5 },
                 backgroundColor: "#2D66F7",
                 fontWeight: "bold",
               }}>
@@ -104,7 +112,7 @@ export default function EcBoostIntroBlocks() {
         </Grid>
 
         {/* Section 2 */}
-        <Grid
+        {/* <Grid
           container
           spacing={4}
           flexDirection={{ xs: "column-reverse", md: "row" }} 
@@ -166,12 +174,15 @@ export default function EcBoostIntroBlocks() {
               Thử AI Chatbot
             </Button>
           </Grid>
-        </Grid>
+        </Grid> */}
 
-        
-        <Grid container spacing={4} mb={10}>
+        <Grid container spacing={4} my={10}>
           <Grid item xs={12} md={6}>
-            <Typography variant={'h1'} sx={{fontSize:{xs:"1.7rem",md:"2.5rem"}}}  fontWeight='bold' gutterBottom>
+            <Typography
+              variant={"h1"}
+              sx={{ fontSize: { xs: "1.7rem", md: "2.5rem" } }}
+              fontWeight='bold'
+              gutterBottom>
               Lorem Ipsum is simply dummy text
             </Typography>
             <Typography
@@ -204,9 +215,9 @@ export default function EcBoostIntroBlocks() {
               variant='contained'
               sx={{
                 borderRadius: 1,
-                fontSize:{xs:"14px",md:"18px"},
+                fontSize: { xs: "14px", md: "18px" },
                 px: 4,
-                py: {xs:1,md:1.5},
+                py: { xs: 1, md: 1.5 },
                 backgroundColor: "#2D66F7",
                 fontWeight: "bold",
               }}>
@@ -230,7 +241,7 @@ export default function EcBoostIntroBlocks() {
         </Grid>
 
         {/* Section 2 */}
-        <Grid
+        {/* <Grid
           container
           spacing={4}
           flexDirection={{ xs: "column-reverse", md: "row" }}>
@@ -249,7 +260,11 @@ export default function EcBoostIntroBlocks() {
             />
           </Grid>
           <Grid item xs={12} md={6}>
-            <Typography variant={'h1'} sx={{fontSize:{xs:"1.7rem",md:"2.5rem"}}}  fontWeight='bold' gutterBottom>
+            <Typography
+              variant={"h1"}
+              sx={{ fontSize: { xs: "1.7rem", md: "2.5rem" } }}
+              fontWeight='bold'
+              gutterBottom>
               Lorem Ipsum is simply dummy text
             </Typography>
             <Typography
@@ -282,16 +297,16 @@ export default function EcBoostIntroBlocks() {
               variant='contained'
               sx={{
                 borderRadius: 1,
-                fontSize:{xs:"14px",md:"18px"},
+                fontSize: { xs: "14px", md: "18px" },
                 px: 4,
-                py: {xs:1,md:1.5},
+                py: { xs: 1, md: 1.5 },
                 backgroundColor: "#2D66F7",
                 fontWeight: "bold",
               }}>
               Thử AI voice text
             </Button>
           </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
     </>
   );

@@ -18,13 +18,14 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-
+import logo from "../images/Frame 10.png";
+import { useNavigate } from "react-router-dom";
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
+  const navigate = useNavigate();
   const handleMenuOpen = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
@@ -62,22 +63,7 @@ const Header = () => {
       <Container maxWidth='lg'>
         <Toolbar disableGutters>
           <Box sx={{ display: "flex", alignItems: "center", mr: 2 }}>
-            <Box
-              sx={{
-                width: 32,
-                height: 32,
-                backgroundColor: "#ddd",
-                borderRadius: "8px",
-                mr: 1,
-              }}
-            />
-            <Typography
-              variant='h6'
-              sx={{ color: "black" }}
-              noWrap
-              fontWeight='bold'>
-              EcBoot
-            </Typography>
+            <img src={logo} alt='' />
           </Box>
 
           {!isMobile && (
@@ -113,7 +99,9 @@ const Header = () => {
 
           {!isMobile ? (
             <>
-              <Button sx={{ mr: 2 }}>Đăng nhập</Button>
+              <Button onClick={() => navigate("/login")} sx={{ mr: 2 }}>
+                Đăng nhập
+              </Button>
               <Button variant='contained' sx={{ borderRadius: 1 }}>
                 Dùng thử miễn phí
               </Button>

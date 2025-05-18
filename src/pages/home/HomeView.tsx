@@ -9,14 +9,16 @@ import Testimonials from "./Testimonials";
 import PricingSection from "./PricingSection";
 import FAQSection from "./FAQSection";
 import CTASection from "./CTASection";
+import TestimonialSection from "./TestimonialSection";
+
 type Props = {};
 
 const HomeView = (props: Props) => {
   return (
-    <Box sx={{overflowX:"hidden"}}>
+    <Box sx={{ overflowX: "hidden" }}>
       <BannerHero />
       <Container
-        maxWidth="lg"
+        maxWidth='lg'
         sx={{
           my: "50px",
           display: "flex",
@@ -36,12 +38,13 @@ const HomeView = (props: Props) => {
         <EcBoostHowItWorks />
         <EcBoostIntroBlocks />
       </Container>
-      <Testimonials/>
-      <Container  maxWidth="lg">
-        <PricingSection/>
-        <FAQSection/>
+      {/* <Testimonials/> */}
+      <TestimonialSection />
+      <Container maxWidth='lg'>
+        <PricingSection />
+        <FAQSection />
       </Container>
-      <CTASection/>
+      <CTASection />
     </Box>
   );
 };
