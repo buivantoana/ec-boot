@@ -15,7 +15,7 @@ import {
   LinkedIn,
   Google,
 } from "@mui/icons-material";
-
+import logo from "../images/Frame 10.png";
 const Footer = () => {
   return (
     <Box sx={{ backgroundColor: "#f9f9f9", pt: 6, pb: 3, mt: 8 }}>
@@ -24,16 +24,7 @@ const Footer = () => {
           {/* Logo + Description */}
           <Grid item xs={12} md={3}>
             <Box display='flex' alignItems='center' mb={1}>
-              <Box
-                sx={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: 2,
-                  backgroundColor: "#ccc",
-                  mr: 1,
-                }}
-              />
-              <Typography fontWeight='bold'>EcBoost</Typography>
+              <img src={logo} alt='' />
             </Box>
             <Typography variant='body2' color='text.secondary' my={3}>
               Giải pháp hàng đầu cho doanh nghiệp thương mại điện tử
